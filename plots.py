@@ -2,6 +2,11 @@ import matplotlib.pyplot as plt
 
 def plot_results(data, metrics):
     fig, ax = plt.subplots(figsize=(10,6))
+    
+    # --- ADD THIS LINE ---
+    fig.canvas.manager.set_window_title("Strategy Backtesting")
+    # ---------------------
+
     ax.plot(data["Cumulative_Market"], label="Market (Buy & Hold)")
     ax.plot(data["Cumulative_Strategy"], label="Strategy SMA 20/50")
     ax.set_title("Moving Average Crossover Strategy vs Market")
