@@ -15,10 +15,6 @@ def main():
     data = sma_crossover(data)
     metrics = calculate_metrics(data)
 
-    print("\nStrategy Performance Metrics\n")
-    for key, value in metrics.items():
-        print(f"{key:20s}: {value}")
-
     plot_results(data, metrics)
 
 if __name__ == "__main__":
