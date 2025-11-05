@@ -1,11 +1,13 @@
 import matplotlib.pyplot as plt
 
 def plot_results(data, metrics):
-    fig, ax = plt.subplots(figsize=(10,6))
     
-    # --- ADD THIS LINE ---
+    # --- MUDANÇA 1: Adicione esta linha para ativar o dark mode ---
+    plt.style.use('dark_background')
+    # -------------------------------------------------------------
+
+    fig, ax = plt.subplots(figsize=(10,6))
     fig.canvas.manager.set_window_title("Strategy Backtesting")
-    # ---------------------
 
     ax.plot(data["Cumulative_Market"], label="Market (Buy & Hold)")
     ax.plot(data["Cumulative_Strategy"], label="Strategy SMA 20/50")
@@ -13,7 +15,7 @@ def plot_results(data, metrics):
     ax.set_xlabel("Data")
     ax.set_ylabel("Cumulative Returns")
     ax.legend()
-    ax.grid(True)
+    ax.grid(True) # A grade agora será cinza clara sobre o fundo escuro
 
     # Adicionar métricas fora do gráfico
     text_str = "\n".join([f"{k}: {v}" for k, v in metrics.items()])
@@ -21,7 +23,7 @@ def plot_results(data, metrics):
     fig.text(
         0.77, 0.5, text_str,
         fontsize=9, va='center',
-        bbox=dict(facecolor='white', alpha=0.8, boxstyle='round,pad=0.5')
+        bbox=dict(facecolor="#222222", alpha=0.8, boxstyle='round,pad=0.5')
     )
 
     plt.show()
