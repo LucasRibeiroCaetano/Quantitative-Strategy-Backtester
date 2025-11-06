@@ -1,5 +1,3 @@
-# main.py
-
 import argparse
 from data import get_data
 from strategy import sma_crossover

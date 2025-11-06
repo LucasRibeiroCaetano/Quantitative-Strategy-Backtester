@@ -27,7 +27,7 @@ To run this project, you will need Python 3.x and the following libraries:
 You can install all dependencies at once using `pip`:
 
 ```bash
-pip install pandas numpy matplotlib yfinance
+pip install pandas numpy matplotlib yfinance matplotx
 ```
 
 ### How to Use
