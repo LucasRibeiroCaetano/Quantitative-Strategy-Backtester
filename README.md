@@ -3,9 +3,6 @@
 This is a simple, command-line based backtesting tool built in Python. It downloads historical financial data, applies a trading strategy (currently a Simple Moving Average crossover as sample), calculates key performance metrics, and plots the cumulative returns and drawdown.
 
 ## Showcase
-
-Here is an example of the backtest plot running for AAPL:
-
 ![Backtest Plot Example](images/showcase.png)
 
 ## Features
