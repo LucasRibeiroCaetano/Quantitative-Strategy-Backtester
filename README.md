@@ -20,6 +20,7 @@ To run this project, you will need Python 3.x and the following libraries:
 * **pandas**: For data manipulation and analysis.
 * **numpy**: For numerical calculations.
 * **matplotlib**: For generating plots.
+* **matplotx**: Matplotlib themes.
 * **yfinance**: For downloading historical market data.
 
 ### Installation
